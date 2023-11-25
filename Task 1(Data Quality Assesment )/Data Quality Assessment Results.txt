@@ -1,0 +1,25 @@
+The E-mail(Submission.pdf) which is sent to the client is based on this results.
+
+1)Transaction Sheet:
+  -missing values in this columns(online_order, brand, product_line, product_class,product_size, standard_cost, product_first_sold_date)
+    -noticed that the values in this columns are always missing simultaneously((brand,product_line,product_class,product_size,standard_cost,product_first_sold_date))
+  -(product_id) column has too many zeros(I guess this zeros suppose to refer to a missing value!?)
+  -(product_first_sold_date) is in timestamp format not datetime format 
+
+2)Customer Demographics Sheet:
+  -missing values in this columns: (last_name, DOB, job_title, job_industry_category, default,tenure)
+  -many values for the same attibute in the (gender) column : (F, Female, Femal) , (Male, M)
+  -(defaults) column has invalid values 
+  -(DOB) column has illogical date of birth value: 1843-12-21
+
+3)Cusotmer Address Sheet:
+  -there are additional clients in the sheet that doesn't exist in the CustomerDemographic Sheet
+  -many values for the same attribute in (state) column : (New South Wales, NSW), (Victoria, VIC)
+
+3)New Customer List Sheet:
+  -missing values in this columns: (last_name, DOB, job_title, job_industry_category)
+  -there are hidden columns that dont have names and some is a duplicated column
+  -many values for the same attribute in (state) column : (New South Wales, NSW), (Victoria, VIC)
+
+**Note:
+  -in the (state) column in the two sheets(NewCustomerList, CustomerAddress), it is better to choose one value to refer to the same state in both sheets : (NSW, New South Wales)
